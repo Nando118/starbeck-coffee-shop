@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Starbeck - Coffee Shop</title>
+    <title>Starbeck Coffee Shop</title>
 
     <!-- Fav Icon -->
     <link
@@ -17,17 +17,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 
+    <!-- My CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!-- Navbar Start -->
+    <!-- Navbar Section Start -->
     <nav class="navbar">
       <a href="#" class="navbar-brand">Starbeck</a>
 
@@ -44,25 +45,48 @@
         <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
       </div>
     </nav>
-    <!-- Navbar End -->
+    <!-- Navbar Section End -->
 
-    <!-- Hero Section -->
+    <!-- Hero Section Start -->
     <section class="hero" id="home">
-      <main class="content">
-        <h1><span class="highlight">New Flavor</span> Cream Frappuccino.</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-          distinctio quaerat accusamus sint reprehenderit ut!
-        </p>
-        <a href="#" class="cta">Order Now</a>
-      </main>
+      <div class="row">
+        <div class="content">
+          <h1><span class="highlight">New Flavor</span> Cream Frappuccino.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
+            distinctio quaerat accusamus sint reprehenderit ut!
+          </p>
+          <a href="#" class="cta">Order Now</a>
+        </div>
+        <div class="hero-img">
+          <img src="./img/hero-image.png" alt="hero-image" />
+        </div>
+      </div>
     </section>
     <!-- Hero Section End -->
 
-    <!-- Feather Icons -->
-    <script src="./js/feather-icon.js"></script>
+    <!-- About Us Section Start -->
+    <section id="about-us" class="about-us">
+      <h2>About Us</h2>
+      <div class="row">
+        <div class="about-us-img">
+          <img src="./img/about-starbeck.png" alt="about-us" />
+        </div>
+        <div class="content">
+          <h3>Why Starbeck?</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Aspernatur, est? Quia alias eius voluptas enim.
+          </p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+    </section>
+    <!-- About Us Section End -->
 
-    <!-- Javascript -->
+    <!-- Feather Icons JS -->
+    <script src="./js/feather-icon.js"></script>
+    <!-- My Javascript -->
     <script src="./js/script.js"></script>
   </body>
 </html>
