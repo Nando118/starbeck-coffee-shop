@@ -20,7 +20,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background);
   color: #000000;
-  min-height: 2000px;
+  /* min-height: 4000px; */
 }
 
 /* CSS Style Here */
@@ -156,7 +156,7 @@ body {
 
 /* Menu Section Start */
 .menu {
-  padding: 4rem 7%;
+  padding: 3rem 7% 4.5rem;
   color: var(--background);
   background-color: var(--accent);
 }
@@ -170,48 +170,33 @@ body {
 .menu p {
   text-align: center;
   font-size: 1.3rem;
+  font-weight: 300;
   margin-bottom: 3rem;
 }
 
 .menu .row {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .menu .row .menu-card {
   text-align: center;
 }
 
-.menu .row .menu-card .menu-img img {
-  height: 10rem;
+.menu .row .menu-card img {
+  width: 15rem;
   border-radius: 50%;
   background-color: var(--background);
 }
 
 .menu .row .menu-card .menu-detail h3.menu-title {
-  font-weight: 500;
+  margin: 1rem auto 0.5rem;
+  font-weight: 600;
 }
 
 .menu .row .menu-card .menu-detail h4.menu-price {
-  font-weight: 400;
-}
-
-.menu .row .menu-card .menu-detail .order-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
-  color: var(--accent);
-  background-color: var(--background);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
-  transition: all 0.3s ease;
-}
-
-.menu .row .menu-card .menu-detail .order-cta:hover {
-  color: var(--background);
-  background-color: #df2e38;
+  font-weight: 300;
 }
 
 /* Menu Section End */
@@ -260,6 +245,124 @@ body {
   line-height: 1.5;
 }
 /* About Us Section End */
+
+/* Contact Us Section Start */
+.contact {
+  padding: 3rem 7% 4.5rem;
+  color: var(--background);
+  background-color: var(--primary);
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.contact .row {
+  display: flex;
+}
+
+.contact .row .contact-maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row .contact-form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  background-color: var(--accent);
+}
+
+.contact .row .contact-form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--background);
+  padding: 1rem;
+  border: 2px solid var(--background);
+  border-radius: 0.5rem;
+}
+
+.contact .row .contact-form .input-group input {
+  width: 100%;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--background);
+}
+
+.contact .row .contact-form .btn-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .row .contact-form .btn-submit button {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  background-color: var(--background);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  transition: all 0.3s ease;
+  border: 2px solid var(--background);
+  cursor: pointer;
+}
+
+.contact .row .contact-form .btn-submit button .submit-icon {
+  margin-right: 0.5rem;
+}
+
+.contact .row .contact-form .btn-submit button:hover {
+  color: var(--background);
+  background-color: #df2e38;
+  border-color: #df2e38;
+}
+
+/* Contact Us Section End */
+
+/* Footer Section Start */
+footer {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+footer a {
+  color: #000000;
+}
+
+footer .social-media a {
+  color: var(--accent);
+  margin: 0.5rem;
+}
+
+footer .links {
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+footer .links a {
+  margin: 0.5rem;
+}
+
+footer .copyright a {
+  color: var(--accent);
+}
+
+/* Footer Section End */
 
 /* ================ */
 /* MEDIA QUERIES */
@@ -384,6 +487,27 @@ body {
     line-height: 1.5;
   }
   /* About Us Section End */
+
+  /* Menu Section Start */
+  .menu .row .menu-card {
+    padding-bottom: 1.5rem;
+  }
+  /* Menu Section End */
+
+  /* Contact Us Section Start */
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .contact-maps {
+    height: 30rem;
+  }
+
+  .contact .row .contact-form {
+    padding-top: 1.5rem;
+  }
+
+  /* Contact Us Section End */
 }
 
 /* Tablet */
@@ -505,6 +629,12 @@ body {
     line-height: 1.5;
   }
   /* About Us Section End */
+
+  /* Menu Section Start */
+  .menu .row .menu-card img {
+    width: 10rem;
+  }
+  /* Menu Section End */
 }
 
 /* Laptop */
