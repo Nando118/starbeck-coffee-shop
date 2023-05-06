@@ -89,6 +89,42 @@ body {
 #hamburger-menu {
   display: none;
 }
+
+/* Search box start */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: var(--background);
+  border: 5px solid rgba(0, 112, 74, 0.75);
+  padding: 1rem;
+  width: 50rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: var(--background);
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+/* Search box end */
+
 /* Navbar Section End */
 
 /* Hero Section Start */
@@ -162,7 +198,7 @@ body {
 .menu {
   padding: 3rem 7% 4.5rem;
   color: var(--background);
-  background-color: var(--accent);
+  background-color: var(--primary);
 }
 
 .menu h2 {
@@ -205,10 +241,117 @@ body {
 
 /* Menu Section End */
 
+/* Products Section Start */
+.products {
+  padding: 3rem 7% 4.5rem;
+  color: var(--primary);
+  background-color: var(--background);
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.1rem;
+}
+
+.products p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+}
+
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.products .product-card .product-img img {
+  padding: 1rem 0;
+  width: 15rem;
+}
+
+.products .product-card .product-content h3 {
+  margin: 1rem auto 0.5rem;
+  font-weight: 600;
+}
+
+.products .product-card .product-content .ratings {
+  padding: 0.5rem;
+  color: var(--accent);
+}
+
+.products .product-card .product-content .ratings .rating-full {
+  fill: var(--accent);
+}
+
+.products .product-card .product-content .product-price {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.products .product-card .product-content .product-price span {
+  text-decoration: line-through;
+  color: #585858;
+  font-size: 0.8rem;
+}
+
+.products .product-card .product-action {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.products .product-card .product-action a {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-card .product-action a#add-to-cart {
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.products .product-card .product-action a#detail {
+  background-color: rgb(66, 66, 253);
+  color: var(--background);
+}
+
+.products .product-card .product-action a#add-to-cart:hover {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.products .product-card .product-action a#detail:hover {
+  background-color: var(--background);
+  color: rgb(66, 66, 253);
+  border: 2px solid rgb(66, 66, 253);
+}
+
+/* Products Section End */
+
 /* About Us Section Start */
 .about-us {
   padding: 1.4rem 7%;
-  color: var(--primary);
+  color: var(--background);
+  background-color: var(--primary);
 }
 
 .about-us h2 {
@@ -253,8 +396,8 @@ body {
 /* Contact Us Section Start */
 .contact {
   padding: 3rem 7% 4.5rem;
-  color: var(--background);
-  background-color: var(--primary);
+  color: var(--accent);
+  background-color: var(--background);
 }
 
 .contact h2 {
@@ -280,11 +423,15 @@ body {
   object-fit: cover;
 }
 
+.contact .row .contact-form input::placeholder {
+  color: #bbbbbb;
+}
+
 .contact .row .contact-form {
   flex: 1 1 45rem;
   padding: 5rem 2rem;
   text-align: center;
-  background-color: var(--accent);
+  background-color: var(--primary);
 }
 
 .contact .row .contact-form .input-group {
@@ -422,6 +569,11 @@ footer .copyright a {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.35);
   }
+
+  .navbar .search-form {
+    width: 70%;
+  }
+
   /* Side Navbar Section End */
 
   /* Hero Section Start */
@@ -454,10 +606,24 @@ footer .copyright a {
   }
   /* Hero Section End */
 
+  /* Menu Section Start */
+  .menu .row .menu-card {
+    padding-bottom: 1.5rem;
+  }
+  /* Menu Section End */
+
+  /* Products Section Start */
+  .products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  /* Products Section End */
+
   /* About Us Section Start */
   .about-us {
     padding: 1.4rem 7%;
-    color: var(--primary);
   }
 
   .about-us h2 {
@@ -492,12 +658,6 @@ footer .copyright a {
   }
   /* About Us Section End */
 
-  /* Menu Section Start */
-  .menu .row .menu-card {
-    padding-bottom: 1.5rem;
-  }
-  /* Menu Section End */
-
   /* Contact Us Section Start */
   .contact .row {
     flex-wrap: wrap;
@@ -509,6 +669,7 @@ footer .copyright a {
 
   .contact .row .contact-form {
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   /* Contact Us Section End */
@@ -596,10 +757,24 @@ footer .copyright a {
   }
   /* Hero Section End */
 
+  /* Menu Section Start */
+  .menu .row .menu-card img {
+    width: 10rem;
+  }
+  /* Menu Section End */
+
+  /* Products Section Start */
+  .products .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  /* Products Section End */
+
   /* About Us Section Start */
   .about-us {
     padding: 1.4rem 7%;
-    color: var(--primary);
   }
 
   .about-us h2 {
@@ -633,12 +808,6 @@ footer .copyright a {
     line-height: 1.5;
   }
   /* About Us Section End */
-
-  /* Menu Section Start */
-  .menu .row .menu-card img {
-    width: 10rem;
-  }
-  /* Menu Section End */
 }
 
 /* Laptop */
